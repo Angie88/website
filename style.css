@@ -1,6 +1,9 @@
+/* added font */ 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
 body {
+
+	/* use gradient on background */
 	background-image: linear-gradient(
 		to top,
 		#FFECB3 0%,
