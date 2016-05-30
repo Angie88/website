@@ -134,6 +134,8 @@ h3 {
 	float:left;
 	margin:10px 0px;
 }
+
+/* style for 1240 px */
 @media screen and (min-width: 1240px) {
 	header{
 		height: 330px;
