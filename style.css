@@ -98,7 +98,7 @@ p::first-letter{
 	font-weight:bold;
 	font-size: 150%;
 }
-
+/* transition for image starts here*/
 #image-container{
 	position:relative;
 	width: 266px;
