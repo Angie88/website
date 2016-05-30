@@ -1,107 +1,90 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
+	background-image: linear-gradient(
+		to top,
+		#FFECB3 0%,
+		#F7E1A0 47%,
+		#FCA249 100%
+	);
+	text-align: center;
+	font-family: "Roboto", Arial;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;	
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/* My code starts here: */
-
-header{
+header {
 	background-color:#689F38;
 	background:url("./images/IMG_0049.jpg") center center no-repeat;
 	position: relative;
 	background-size: cover;
 	padding: 0;
 	z-index: 999;
-	height: 330px;
-	}
-
-
-h1{
-   font-size: 38px;
-   position: absolute;
-   top:280px;
-   left:10px;
+	height: 200px;
+	display:flex;	
+	justify-content:center;
+	align-items:center;
+}
+h1 {
+   font-size: 18px;
    color: wheat;
    text-shadow: -4px 0 black, 0 4px black, 4px 0 black, 0 -4px black;
-   font-family: arial;
 }
 
-body {
-	background-color: #FFECB3;
-    text-align: center;
-}
-
-nav{
+nav {
 	margin: 0 0 0 0px;
-    padding: 0;
-    background-color: #FFC107;
-    color:white;
-    width:100%;
-    float:left;
-    font-family: arial;
+	padding: 0;
+	background-color: #FFC107;
+	color:white;
+	width:100%;
+	float:left;
 }
 
-nav a{
-	text-decoration: none;
+nav a {
+	transition: all 0.5 ease;
 	color:white;
+	text-decoration:none;
 }
-nav a:hover{
+nav a:hover {
 	color:black;
 }
 
-nav a:active{
+nav a:active {
 	color:red;
 }
 
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	background: white;
+}
+
+li {
+  padding:2px 0px;
+}
+	 
+#container {
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;
+	float:left;
+}
+#content {
+	float:left;
+	width:95%;
+	padding:2.5%;
+	background-color:white;
+	display:flex;
+    align-items:center;
+	justify-content:flex-start;
+	flex-direction:column;
+	text-align: justify;
+}
 
 p {
    color: black;
-   font-family: arial;
    line-height: 1.25;
    font-size: 16px;
    background-color: white;
@@ -113,61 +96,107 @@ p::first-letter{
 	font-size: 150%;
 }
 
-ul{
-  list-style-type: none;
-  padding-left: 0;
-  background-color: #4CAF50;
+#image-container{
+	position:relative;
+	width: 266px;
+	height: 240px;	
+}
+#image-container img{
+	position:absolute;
+	transition: opacity 1s ease-in-out;	
+}
+#image-container img.top:hover{
+	opacity:0;
 }
 
-li{
-  float:left;
-  margin: 0px 40px;
-  padding:10px 0px;
- }
+h4.comment{
+	position:absolute;
+	bottom:0;
+	left:41%;
+}
 
- li:hover{
- 	color:blue;
- 	padding:10px 0px;
- }
- 
+img {
+	width: 250px;
+	height: 200px;
+	border: 8px solid #FFC107;
+	border-radius: 25px;
+}	
+
 section{
-	 width: 48%;
-	 padding:1%;
-	 float:left;
-}
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+	padding:2px;
 }
 
-#wrapper{
-	width: 940px;
-	margin: 0 auto;
-	text-align: justify;
-	background: white;
-}
-
-#container{
-	width:100%;
-	margin-left:auto;
-	margin-right:auto;
+h3 {
+	font-weight:bold;
 	float:left;
+	margin:10px 0px;
 }
-#content{
-	float:left;
-	width:100%;
-	background-color:white;
+@media screen and (min-width: 1240px) {
+	header{
+		height: 330px;
+	}
+		
+	h1{
+	   font-size: 38px;
+	   position: absolute;
+	   top:280px;
+	   left:10px;
+	}
+	
+	ul{
+	  list-style-type: none;
+	  padding-left: 0;
+	  background-color: #4CAF50;
+	}
+	
+	li{
+	  float:left;
+	  margin: 0px 40px;
+	  padding:10px 0px;
+	 }
+	
+	 li:hover{
+		color:blue;
+		padding:10px 0px;
+	 }
+	 
+	section{
+		 width: 48%;
+		 padding:1%;
+		 float:left;
+	}
+	.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+	#wrapper{
+		width: 940px;
+		text-align: justify;
+	}
+	
+	#content{
+		width:100%;
+		padding:0%;
+		display:block;		
+	}
+	
+	#image-container{
+		width: 416px;
+		height: 340px;	
+	}	
+
+	#image-container h4.comment{
+		position:absolute;
+		bottom:0;
+		left:44%;
+	}	
+	
+	img{
+		width: 400px;
+		height: 300px;
+		float:left;
+		margin:1px 25px;
+	}	
 }
-
-
-img{
-    width: 400px;
-    height: 300px;
-    float:left;
-    margin:1px 25px;
-    border: 8px solid #FFC107;
-    border-radius: 25px;
-}
-
-
