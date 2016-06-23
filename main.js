@@ -1,5 +1,6 @@
 $(document).ready( function(){
-	$( ".showButton" ).click(function() {
+	$( "#content" ).on("click",".showButton",function(event) {
+	  event.preventDefault();
 	  $(this).next(".hiddenContent").show("slow");
 	});
 });
